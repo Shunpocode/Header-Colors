@@ -1,5 +1,5 @@
+var sectionCount = [];
 window.onload = function(){
-    var sectionCount = [];
         for (let i = 0; i < document.getElementsByTagName("section").length; i++){
             sectionCount[i] = document.getElementsByTagName("section")[i];
         }
