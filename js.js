@@ -12,11 +12,9 @@ window.onload = function(){
         }
     addJSInterval.text = addJSInterval.text + '\n}else{document.getElementsByTagName("header")[0].style.background = "transparent";}}, 100);';
     document.body.appendChild(addJSInterval);
-
-
-    function backColorHeader(element){
+}
+function backColorHeader(element){
         var color = window.getComputedStyle(element).backgroundColor;
         element.innerHTML = element.innerHtml + color + ';';
         document.getElementsByTagName("header")[0].style.background = color;
     }
-}
