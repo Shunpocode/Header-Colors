@@ -10,7 +10,7 @@ intervalSection.text ='console.log(sectionCount[1]); setInterval(() => {\nif( "-
         x++;
     }
 intervalSection.text = intervalSection.text + '\n}else{document.getElementsByTagName("header")[0].style.background = "transparent";}}, 100);';
-document.body.appendChild(intervalSection);
+document.getElementsByTagName('body')[0].appendChild(intervalSection);
 
 
 function backColorHeader(element){
