@@ -7,7 +7,9 @@ intervalSection.type = 'text/javascript';
 intervalSection.text ='console.log(sectionCount[1]); setInterval(() => {\nif( "-" + sectionCount[0].clientHeight > sectionCount[0].getBoundingClientRect().y){\n';
     for (let i = 1, x = 0; i < sectionCount.length; i++) {
         intervalSection.text = intervalSection.text + '\nif("-" + sectionCount['+ i +'].clientHeight < sectionCount['+ i +'].getBoundingClientRect().y && "-" + sectionCount['+ x +'].clientHeight > sectionCount['+ x +'].getBoundingClientRect().y) \n{\n\tbackColorHeader(sectionCount['+ x +']);\n}';
-        x++;
+        if (x < sectionCount.length.pop()) {
+            x++;
+        }
     }
 intervalSection.text = intervalSection.text + '\n}else{document.getElementsByTagName("header")[0].style.background = "transparent";}}, 100);';
 document.body.appendChild(intervalSection);
