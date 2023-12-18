@@ -1,6 +1,6 @@
 var sectionCount = [];
     for (let i = 0; i < document.getElementsByTagName("section").length; i++){
-        sectionCount[i] = document.getElementsByTagName("section")[i]
+        sectionCount[i] = document.getElementsByTagName("section")[i];
     }
 var intervalSection = document.createElement('script');
 intervalSection.type = 'text/javascript';
@@ -10,7 +10,7 @@ intervalSection.text ='console.log(sectionCount[1]); setInterval(() => {\nif( "-
         x++;
     }
 intervalSection.text = intervalSection.text + '\n}else{document.getElementsByTagName("header")[0].style.background = "transparent";}}, 100);';
-document.getElementsByTagName('body')[0].appendChild(intervalSection);
+document.body.appendChild(intervalSection);
 
 
 function backColorHeader(element){
